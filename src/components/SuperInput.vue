@@ -1,5 +1,7 @@
 <template>
-    <el-input v-model="input" placeholder="请输入内容" @input.native="handleChange"></el-input>
+  <el-input v-model="input" onkeyup="this.value=this.value.replace(/[^\d.]/g,'');" onblur="this.value=this.value.replace(/[^\d.]/g,'');"
+  >
+  </el-input>
 </template>
 
 <script>
