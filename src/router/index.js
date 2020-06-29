@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import Test from '@/components/Test'
 import SuperInput from '@/components/SuperInput'
+import Select from '@/components/Select'
 
 Vue.use(Router)
 
@@ -11,7 +12,7 @@ export default new Router({
     {
       path: '/',
       name: 'Test',
-      component: SuperInput
+      component: Select
     }
   ]
 })
