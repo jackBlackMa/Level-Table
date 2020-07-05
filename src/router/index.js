@@ -5,6 +5,7 @@ import Test from '@/components/Test'
 import SuperInput from '@/components/SuperInput'
 import Select from '@/components/Select'
 import Collapse from '@/views/collapse'
+import quickLayout from '@/views/quickLayout'
 
 Vue.use(Router)
 
@@ -14,6 +15,11 @@ export default new Router({
       path: '/',
       name: 'Test',
       component: Collapse
+    },
+    {
+      path: '/emmet',
+      name: 'emmet',
+      component: quickLayout
     }
   ]
 })
