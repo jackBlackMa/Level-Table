@@ -41,7 +41,7 @@
 
 <script>
   export default {
-    name: "quickLayout"
+    name: "quickLayout",
   }
 </script>
 
