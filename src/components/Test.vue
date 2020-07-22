@@ -4,7 +4,9 @@
       :data="data"
       node-key="id"
       :default-expand-all="true"
-      :expand-on-click-node="false">
+      :expand-on-click-node="false"
+      ref="tree"
+    >
       <div slot-scope="{ node, data }" style="width: 100%">
         <div class="custom-tree-node">
           <span>{{ node.label }}</span>
@@ -71,7 +73,6 @@
     data() {
       return {
         data: [{
-          id: 1,
           label: '1 中心经营情况与同业分析',
           tableData: [{
             date: '2016-05-02',
@@ -83,7 +84,6 @@
             address: '上海市普陀区金沙江路 1517 弄'
           },],
           children: [{
-            id: 4,
             label: '1.1 中心经营情况',
             tableData: [{
               date: '2016-05-02',
@@ -137,10 +137,12 @@
       },
 
       remove(node, data) {
-        const parent = node.parent;
-        const children = parent.data.children || parent.data;
-        const index = children.findIndex(d => d.id === data.id);
-        children.splice(index, 1);
+        debugger
+        console.log(this.$refs.tree.getCheckedKeys().concat(this.$refs.tree.getHalfCheckedKeys()))
+        // const parent = node.parent;
+        // const children = parent.data.children || parent.data;
+        // const index = children.findIndex(d => d.id === data.id);
+        // children.splice(index, 1);
       },
     }
   };
