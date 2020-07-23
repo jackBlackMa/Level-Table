@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-select v-model="value">
+    <v-select v-model="value" :key="value">
 
     </v-select>
   </div>
