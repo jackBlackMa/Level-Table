@@ -15,7 +15,7 @@
     },
     methods: {
       open () {
-        localStorage.setItem("fileName",'123')
+        localStorage.setItem("fileName",'test')
         window.open(this.pSrc)
       }
     }

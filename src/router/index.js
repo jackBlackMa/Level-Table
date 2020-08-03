@@ -6,6 +6,8 @@ import SuperInput from '@/components/SuperInput'
 import superSelect from '@/components/superSelect'
 import TestSelect from '@/components/TestSelect'
 import Fdf from '@/views/7-23/pdf'
+import Edit from '@/views/edit/Edit'
+import Life from '@/views/8-3/demo1'
 
 Vue.use(Router)
 
@@ -14,7 +16,7 @@ export default new Router({
     {
       path: '/',
       name: 'Test',
-      component: Fdf
+      component: Life
     },
     {
       path: '/superSelect',
