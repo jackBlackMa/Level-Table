@@ -11,6 +11,7 @@ import superSelect from '@/views/8-10/demo1'
 import LongSearch from '@/components/LongSearch'
 import Event from "@/views/9-1/index"
 import Box from '@/views/9-17/demo1'
+import SuperForm from '@/views/9-17/demo2'
 
 Vue.use(Router)
 
@@ -21,7 +22,7 @@ export default new Router({
     {
       path: '/',
       name: 'Test',
-      component: Box
+      component: SuperForm
     },
     {
       path: '/superSelect',
