@@ -1,14 +1,21 @@
 <template>
   <div>
-    <el-select v-model="checked" @change="change">
-      <el-option
-        v-for="item in 10"
-        :key="item"
-        :value="item"
-        :label="item"
-      >
-      </el-option>
-    </el-select>
+    <el-dialog
+      title="提示"
+      :visible.sync="dialogVisible"
+      width="30%"
+    >
+      <el-select v-model="selectChecked" @change="change">
+        <el-option
+          v-for="item in 10"
+          :key="item"
+          :value="item"
+          :label="item"
+        >
+        </el-option>
+      </el-select>
+    </el-dialog>
+
   </div>
 </template>
 
@@ -24,12 +31,23 @@
       // use `checked` as the prop which take the place of `value`
       checked: {
         type: Number,
-        default: 0
+        default: ''
+      },
+      dialogVisible: false
+    },
+    data() {
+      return {
+        selectChecked: ''
       }
     },
     methods: {
       change(value) {
         this.$emit('change', value)
+      }
+    },
+    watch: {
+      checked(newValue) {
+        this.selectChecked = newValue
       }
     }
   }

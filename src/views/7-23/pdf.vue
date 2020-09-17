@@ -10,13 +10,16 @@
     name: "pdf.js",
     data(){
       return {
-        pSrc:`../../../static/web/viewer.html?file=${'http://storage.xuetangx.com/public_assets/xuetangx/PDF/PlayerAPI_v1.0.6.pdf'}`
+        // pSrc:`../../../static/web/viewer.html?file=${'http://storage.xuetangx.com/public_assets/xuetangx/PDF/PlayerAPI_v1.0.6.pdf'}`
+        pSrc : 'http://storage.xuetangx.com/public_assets/xuetangx/PDF/PlayerAPI_v1.0.6.pdf'
       }
     },
     methods: {
       open () {
-        localStorage.setItem("fileName",'test')
-        window.open(this.pSrc)
+        let oA = document.createElement('a');
+        oA.href = this.pSrc;
+        oA.download="filename"
+        oA.click()
       }
     }
   }
