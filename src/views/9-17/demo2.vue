@@ -7,7 +7,6 @@
                       prop="name"
                       :prop="'domains.' + index + '.name'"
                       :rules="rules.name"
-                      :index="index"
         >
           <el-input v-model="domain.name"></el-input>
         </el-form-item>
