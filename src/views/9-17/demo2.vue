@@ -35,10 +35,14 @@
 <script>
   export default {
     data() {
+      // 自定义校验
       var validatePass = (rule, value, callback) => {
+        // 获取当前index
         let num = Number(rule.field.split('.')[1]);
         if (num > 0) {
+          // 当前位数大于1
           let lastNum = num - 1;
+          // 如果上一个值大于当前值，则提示错误
           if (Number(this.dynamicValidateForm.domains[lastNum]['name']) > Number(value)) {
             callback(new Error('必须大于前一个值'));
           } else {
