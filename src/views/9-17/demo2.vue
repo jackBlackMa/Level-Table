@@ -7,6 +7,7 @@
                       prop="name"
                       :prop="'domains.' + index + '.name'"
                       :rules="rules.name"
+                      :index="index"
         >
           <el-input v-model="domain.name"></el-input>
         </el-form-item>
@@ -34,6 +35,19 @@
 <script>
   export default {
     data() {
+      var validatePass = (rule, value, callback) => {
+        let num = Number(rule.field.split('.')[1]);
+        if (num > 0) {
+          let lastNum = num - 1;
+          if (Number(this.dynamicValidateForm.domains[lastNum]['name']) > Number(value)) {
+            callback(new Error('必须大于前一个值'));
+          } else {
+            callback();
+          }
+        } else {
+          callback();
+        }
+      };
       return {
         dynamicValidateForm: {
           domains: [
@@ -46,6 +60,7 @@
         rules: {
           name: [
             {required: true, message: '请输入活动名称', trigger: 'blur'},
+            {validator: validatePass, trigger: 'blur'}
           ],
           region: [
             {required: true, message: '请选择活动区域', trigger: 'change'}
