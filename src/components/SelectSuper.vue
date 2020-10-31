@@ -27,6 +27,11 @@
         default: 0
       }
     },
+    data() {
+      return  {
+        value: this.checked
+      }
+    },
     methods: {
       change(value) {
         this.$emit('change', value)
