@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-son v-if="visible" :data="data" :key="new Date().getTime()"></v-son>
+    <v-son v-show="visible" :data="data" :key="new Date().getTime()"></v-son>
   </div>
 </template>
 

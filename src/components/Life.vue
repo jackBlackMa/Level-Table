@@ -64,7 +64,10 @@
       console.log("%c%s", "color: red", "data: " + this.$data);
       console.log("%c%s", "color: red", "message: " + this.message);
       console.log("%c%s", "color: red", "table: " + this.$refs.table);
-      this.$refs.table.toggleRowSelection(this.data[0]);
+      this.data.forEach(item => {
+        this.$refs.table.toggleRowSelection(item);
+
+      })
     },
     beforeUpdate() {
       console.group("-------son-beforeUpdate的状态--------");
