@@ -15,7 +15,7 @@
         () => {
           self.value = {
             title: 1,
-          }
+          };
           self.$refs.model.$emit('bus', [1,2])
         }, 2000
       )

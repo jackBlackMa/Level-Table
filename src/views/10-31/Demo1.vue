@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- 每次显示都重新渲染组件 -->
     <v-son v-show="visible" :data="data" :key="new Date().getTime()"></v-son>
   </div>
 </template>
@@ -31,6 +32,7 @@
       console.log("%c%s", "color: red", "data: " + this.$data);
       console.log("%c%s", "color: red", "message: " + this.message);
       const self = this;
+      // 假装请求，延迟两秒
       setTimeout(() =>
         {
 
