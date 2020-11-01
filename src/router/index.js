@@ -7,6 +7,7 @@ import superSelect from '@/components/superSelect'
 import TestSelect from '@/components/TestSelect'
 import Edit from '@/views/Edit'
 import Model from '@/views/8-19/demo1'
+import Demo1 from "@/views/10-31/Demo1"
 
 Vue.use(Router)
 
@@ -15,7 +16,7 @@ export default new Router({
     {
       path: '/',
       name: 'Test',
-      component: Model
+      component: Demo1
     },
     {
       path: '/superSelect',
