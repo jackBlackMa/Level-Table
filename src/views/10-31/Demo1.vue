@@ -1,7 +1,8 @@
 <template>
   <div>
     <!-- 每次显示都重新渲染组件 -->
-    <v-son v-show="visible" :data="data" :key="new Date().getTime()"></v-son>
+    <v-son v-if="visible" :data="data" :key="new Date().getTime()"></v-son>
+
   </div>
 </template>
 
@@ -41,6 +42,190 @@
             {
               name: "张三",
               age: 13
+            },
+            {
+              name: "李四",
+              age: 14
+            },
+            {
+              name: "李四",
+              age: 14
+            },
+            {
+              name: "李四",
+              age: 14
+            },
+            {
+              name: "李四",
+              age: 14
+            },
+            {
+              name: "李四",
+              age: 14
+            },
+            {
+              name: "李四",
+              age: 14
+            },
+            {
+              name: "李四",
+              age: 14
+            },
+            {
+              name: "李四",
+              age: 14
+            },
+            {
+              name: "李四",
+              age: 14
+            },
+            {
+              name: "李四",
+              age: 14
+            },
+            {
+              name: "李四",
+              age: 14
+            },
+            {
+              name: "李四",
+              age: 14
+            },
+            {
+              name: "李四",
+              age: 14
+            },
+            {
+              name: "李四",
+              age: 14
+            },
+            {
+              name: "李四",
+              age: 14
+            },
+            {
+              name: "李四",
+              age: 14
+            },
+            {
+              name: "李四",
+              age: 14
+            },
+            {
+              name: "李四",
+              age: 14
+            },
+            {
+              name: "李四",
+              age: 14
+            },
+            {
+              name: "李四",
+              age: 14
+            },
+            {
+              name: "李四",
+              age: 14
+            },
+            {
+              name: "李四",
+              age: 14
+            },
+            {
+              name: "李四",
+              age: 14
+            },
+            {
+              name: "李四",
+              age: 14
+            },
+            {
+              name: "李四",
+              age: 14
+            },
+            {
+              name: "李四",
+              age: 14
+            },
+            {
+              name: "李四",
+              age: 14
+            },
+            {
+              name: "李四",
+              age: 14
+            },
+            {
+              name: "李四",
+              age: 14
+            },
+            {
+              name: "李四",
+              age: 14
+            },
+            {
+              name: "李四",
+              age: 14
+            },
+            {
+              name: "李四",
+              age: 14
+            },
+            {
+              name: "李四",
+              age: 14
+            },
+            {
+              name: "李四",
+              age: 14
+            },
+            {
+              name: "李四",
+              age: 14
+            },
+            {
+              name: "李四",
+              age: 14
+            },
+            {
+              name: "李四",
+              age: 14
+            },
+            {
+              name: "李四",
+              age: 14
+            },
+            {
+              name: "李四",
+              age: 14
+            },
+            {
+              name: "李四",
+              age: 14
+            },
+            {
+              name: "李四",
+              age: 14
+            },
+            {
+              name: "李四",
+              age: 14
+            },
+            {
+              name: "李四",
+              age: 14
+            },
+            {
+              name: "李四",
+              age: 14
+            },
+            {
+              name: "李四",
+              age: 14
+            },
+            {
+              name: "李四",
+              age: 14
             },
             {
               name: "李四",

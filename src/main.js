@@ -4,9 +4,14 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import Element from 'element-ui'
+import { MessageBox } from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css';
 
 Vue.config.productionTip = false
+
+import VueCropper from 'vue-cropper'
+Vue.prototype.ElMessage = MessageBox;
+Vue.use(VueCropper)
 
 Vue.use(Element)
 /* eslint-disable no-new */

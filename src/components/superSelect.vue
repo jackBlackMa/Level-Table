@@ -1,13 +1,17 @@
 <template>
-  <el-select v-model="value1" multiple placeholder="请选择" @click="handleItem">
-    <el-option
-      v-for="item in options"
-      :key="item.value"
-      :label="item.label"
-      :value="item.value"
-    >
-    </el-option>
-  </el-select>
+  <div>
+    <el-select v-model="value1" multiple placeholder="请选择" @click="handleItem">
+      <el-option
+        v-for="item in options"
+        :key="item.value"
+        :label="item.label"
+        :value="item.value"
+      >
+      </el-option>
+    </el-select>
+    <div @click="$router.go(-1)">点这里跳转返回</div>
+  </div>
+
 </template>
 
 <script>
